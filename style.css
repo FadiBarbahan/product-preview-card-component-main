@@ -1,10 +1,10 @@
 @font-face {
-  font-family: Montserrat;
+  font-family: 'Montserrat';
   src: url(fonts/Montserrat-VariableFont_wght.ttf);
   font-weight: 500, 700;
 }
 @font-face {
-  font-family: Fraunces;
+  font-family: 'Fraunces';
   src: url(fonts/Fraunces-VariableFont_SOFT\WONK\opsz\wght.ttf);
   font-weight: 700;
 }
@@ -23,8 +23,8 @@
   --fw--regular: 500;
   --fw-bold: 700;
 
-  --ff-base: Montserrat;
-  --ff-title: Fraunces;
+  --ff-base: 'Montserrat';
+  --ff-title: 'Fraunces';
 
   --w-card-m: 350px;
   --w-card-d: 600px;
