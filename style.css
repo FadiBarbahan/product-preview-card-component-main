@@ -1,0 +1,145 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(fonts/Montserrat-VariableFont_wght.ttf);
+  font-weight: 500, 700;
+}
+@font-face {
+  font-family: Fraunces;
+  src: url(fonts/Fraunces-VariableFont_SOFT\WONK\opsz\wght.ttf);
+  font-weight: 700;
+}
+
+:root {
+  --clr-dark-cyan: hsl(158, 36%, 37%);
+  --clr-cream: hsl(30, 38%, 92%);
+
+  --clr-very-dark-blue: hsl(212, 21%, 14%);
+  --clr-dark-grayish-blue: hsl(228, 12%, 48%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --fs-p: 0.875rem;
+  --fs-h: 2.3rem;
+
+  --fw--regular: 500;
+  --fw-bold: 700;
+
+  --ff-base: Montserrat;
+  --ff-title: Fraunces;
+
+  --w-card-m: 350px;
+  --w-card-d: 600px;
+
+  --h-button: 3rem;
+
+  --p-m: 1.5rem;
+  --p-d: 2rem;
+
+  --gap-m: 1rem;
+  --gap-d: 1.5rem;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.img {
+  width: 100%;
+  display: block;
+}
+
+body {
+  font-family: var(--ff-base);
+  font-size: var(--fs-p);
+  font-weight: var(--fw--regular);
+
+  color: var(--clr-dark-grayish-blue);
+  background-color: var(--clr-cream);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card {
+  background-color: var(--clr-white);
+  max-width: var(--w-card-m);
+  overflow: hidden;
+  border-radius: 0.5rem;
+  display: grid;
+}
+
+.content {
+  padding: var(--p-m);
+  display: grid;
+  gap: var(--gap-m);
+}
+
+.small-title {
+  letter-spacing: 4px;
+}
+
+.big-title {
+  color: var(--clr-very-dark-blue);
+  font-family: var(--ff-title);
+  font-size: var(--fs-h);
+  font-weight: var(--fw-bold);
+  line-height: 0.9;
+}
+
+p {
+  line-height: 1.5;
+}
+
+.prices {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-m);
+}
+
+.new-price {
+  color: var(--clr-dark-cyan);
+  font-family: var(--ff-title);
+  font-size: var(--fs-h);
+  font-weight: var(--fw-bold);
+}
+
+.old-price {
+  text-decoration: line-through;
+}
+
+.button {
+  background-color: var(--clr-dark-cyan);
+  color: var(--clr-white);
+  font-weight: var(--fw-bold);
+  height: var(--h-button);
+  border-radius: .5rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: .5rem;
+}
+
+@media (min-width: 600px) {
+  .img  {
+    content: url(images/image-product-desktop.jpg);
+    height: 100%;
+  }
+
+  .card {
+    max-width: var(--w-card-d);
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .content {
+  padding: var(--p-d);
+  gap: var(--gap-d);
+  }
+
+  .prices {
+    gap: var(--gap-d);
+  }
+}
